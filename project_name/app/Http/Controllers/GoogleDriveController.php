@@ -12,8 +12,8 @@ class GoogleDriveController extends Controller
         {
                 // List of file IDs from the public Google Drive folder
                         $fileIds = [
-                                    'file1' => 'YOUR_FILE_ID_1',
-                                    'file2' => 'YOUR_FILE_ID_2',
+                                    'file1' => '1TDB-9qBRiM8-ds9qPNLMjqdC8HbUt2mw',
+                                    'file2' => '1TDB-9qBRiM8-ds9qPNLMjqdC8HbUt2mw',
                                                             // Add more file IDs as needed
                                                                     ];
 
