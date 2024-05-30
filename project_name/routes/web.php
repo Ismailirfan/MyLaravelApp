@@ -1,7 +1,7 @@
 <?php
-
+/*
 use Illuminate\Support\Facades\Route;
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ Route::get('/', function () {
 */
 // routes/web.php
 
-Route 
- App\Http\Controllers\GoogleDriveController;
+
+ use App\Http\Controllers\GoogleDriveController;
 
  Route::get('/fetch-google-drive-files', [GoogleDriveController::class, 'fetchFiles']);
