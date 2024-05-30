@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+// routes/web.php
+
+Route 
+ App\Http\Controllers\GoogleDriveController;
+
+ Route::get('/fetch-google-drive-files', [GoogleDriveController::class, 'fetchFiles']);
