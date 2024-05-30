@@ -28,31 +28,27 @@
     </style>
 </head>
 <body>
-    <h1 style="display:none">HTML Files from Google Drive</h1>
+    <h1>HTML Files from Google Drive</h1>
     @foreach($fileUrls as $fileName => $url)
         <div class="file-container">
             <div class="file-name">{{ $fileName }}</div>
-            <iframe src="{{ $url }}" class="file-iframe"></iframe>
+            <iframe src="{{ $url }}" class="file-iframe" onload="extractIframeContent(this)"></iframe>
         </div>
     @endforeach
 
-    <!-- Target element to inject iframe content -->
-    <div id="iframeContent"></div>
+    <!-- Target element to display extracted iframe content -->
+    <div id="extractedContent"></div>
 
     <script>
-        // Function to fetch iframe content and inject it into a specific element
-        function fetchIframeContent() {
-            var iframe = document.querySelector('.file-iframe');
-            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            var iframeContent = iframeDocument.documentElement.innerHTML;
+        // Function to extract iframe content and display it
+        function extractIframeContent(iframe) {
+            // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            var iframeHtml = iframeDocument.documentElement.innerHTML;
 
-            // Inject the iframe content into the target element
-            var targetElement = document.getElementById('iframeContent');
-            targetElement.html = iframeContent;
+            // Display the extracted iframe content in the target element
+            var extractedContent = document.getElementById('extractedContent');
+            extractedContent.innerHTML += '<div class="extracted-file">' + iframeHtml + '</div>';
         }
-
-        // Call the fetchIframeContent function when the page loads
-        window.onload = fetchIframeContent;
     </script>
 </body>
 </html>
