@@ -20,7 +20,10 @@ class GoogleDriveController extends Controller
                                                                             $fileContents = [];
 
                                                                                     foreach ($fileIds as $fileName => $fileId) {
-                                                                                                $fileUrl = "https://drive.google.com/uc?export=download&id=$fileId";
+                                                                                                $fileUrl = "https://drive.google.com/file/d/1TDB-9qBRiM8-ds9qPNLMjqdC8HbUt2mw/view?usp=drivesdk";
+                                                                                                /*https://drive.google.com/uc?export=download&id=$fileId*/
+                                                                                                
+
                                                                                                             $fileContents[$fileName] = file_get_contents($fileUrl);
                                                                                                                     }
 
