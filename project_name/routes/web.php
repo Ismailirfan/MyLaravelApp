@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // routes/web.php
 
+use App\Http\Controllers\FileController;
 
- // routes/web.php
+Route::get('/list-files', [FileController::class, 'listFiles']);
 
-use App\Http\Controllers\GoogleDriveController;
-
-Route::get('/fetch-html-files', [FileController::class, 'fetchHtmlFiles']);
