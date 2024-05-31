@@ -24,4 +24,4 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\GoogleDriveController;
 
-Route::get('/fetch-html-files', [GoogleDriveController::class, 'fetchHtmlFiles']);
+Route::get('/fetch-html-files', [FileController::class, 'fetchHtmlFiles']);
